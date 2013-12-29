@@ -1,0 +1,9 @@
+/**
+ * \mainpage QLedMatrix
+ *
+ * <b>A LED matrix display widget for Qt4</b>
+ * <hr size="1">
+ * The QLedMatrix widget simulates a LED matrix (dot matrix) display.
+ *
+ * It is also available as a Qt designer plugin (QLedMatrixPlugin class).
+ */

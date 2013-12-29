@@ -1,0 +1,50 @@
+
+QLedMatrix Widget
+-----------------
+
+      The QLedMatrix widget simulates a LED matrix (dot matrix) display.
+
+      A LED matrix display is a 2-dimensional array of dots used to generate
+      characters, symbols and images. It is often seen on machines, clocks and
+      display boards.
+
+      This generic implementation can configured for any size of rows (greater
+      than 0) and columns. The number of colors is not limited, therefore it
+      can be used to make a monochrome, bi-color or even a full RGB display.
+
+      Individual LEDs can be addressed in the matrix by their row and column
+      position. The index (0,0) is located in the upper left corner. Columns
+      grow from left to right, and rows grow from top to bottom.
+
+Installation
+------------
+
+      QLedMatrix library:
+        qmake
+        make
+        make install (or copy the plugin into "<Qt4 dir>/plugins/designer")
+
+      QLedMatrix example:
+        cd example
+        qmake
+        make
+        ./qledmatrix_demo
+
+Copyright
+---------
+
+    Copyright (C) 2009 Pierre-Etienne Messier <pierre.etienne.messier@gmail.com>
+                       http://pemessier.hexpresso.org/
+
+    This library is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with this library.  If not, see <http://www.gnu.org/licenses/>.
