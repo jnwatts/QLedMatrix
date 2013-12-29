@@ -3,3 +3,4 @@ moc_*
 ui_*
 *.user
 Makefile
+build/
