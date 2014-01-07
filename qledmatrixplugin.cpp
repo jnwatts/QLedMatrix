@@ -48,17 +48,17 @@ QWidget* QLedMatrixPlugin::createWidget(QWidget* parent)
 
 QString QLedMatrixPlugin::name() const
 {
-    return QString::fromAscii("QLedMatrix");
+    return QString::fromLocal8Bit("QLedMatrix");
 }
 
 QString QLedMatrixPlugin::group() const
 {
-    return QString::fromAscii("Display Widgets");
+    return QString::fromLocal8Bit("Display Widgets");
 }
 
 QIcon QLedMatrixPlugin::icon() const
 {
-    return QIcon(QString::fromAscii(":/qledmatrix.png"));
+    return QIcon(QString::fromLocal8Bit(":/qledmatrix.png"));
 }
 
 QString QLedMatrixPlugin::toolTip() const
@@ -78,7 +78,7 @@ bool QLedMatrixPlugin::isContainer() const
 
 QString QLedMatrixPlugin::domXml() const
 {
-    return QString::fromAscii(
+    return QString::fromLocal8Bit(
            "<widget class=\"QLedMatrix\" name=\"ledMatrix\">\n"
            " <property name=\"geometry\">\n"
            "  <rect>\n"
@@ -116,7 +116,9 @@ QString QLedMatrixPlugin::domXml() const
 
 QString QLedMatrixPlugin::includeFile() const
 {
-    return QString::fromAscii("qledmatrix.h");
+    return QString::fromLocal8Bit("qledmatrix.h");
 }
 
+#if QT_VERSION < QT_VERSION_CHECK(5,0,0)
 Q_EXPORT_PLUGIN2(qledmatrixplugin, QLedMatrixPlugin)
+#endif

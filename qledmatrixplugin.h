@@ -26,6 +26,9 @@
 class QLedMatrixPlugin : public QObject, public QDesignerCustomWidgetInterface
 {
     Q_OBJECT
+#if QT_VERSION > QT_VERSION_CHECK(5,0,0)
+    Q_PLUGIN_METADATA(IID QDesignerCustomWidgetInterface_iid)
+#endif
     Q_INTERFACES(QDesignerCustomWidgetInterface)
 
     public:

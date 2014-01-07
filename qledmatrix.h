@@ -21,8 +21,24 @@
 #ifndef QLEDMATRIX_H
 #define QLEDMATRIX_H
 
+#include <QObject>
+
+#if QT_VERSION > QT_VERSION_CHECK(5,0,0)
+// QT 5.x
+#ifdef QDESIGNER_EXPORT_WIDGETS
+#include <QWidget>
+#include <QDesignerExportWidget>
+#else
+// Included by project
+#ifndef QDESIGNER_WIDGET_EXPORT
+#define QDESIGNER_WIDGET_EXPORT Q_DECL_IMPORT
+#endif
+#endif
+#else
+// QT 4.x
 #include <QtGui/qwidget.h>
 #include <QtDesigner/QDesignerExportWidget>
+#endif
 
 class QLedMatrixPrivate;
 class QDESIGNER_WIDGET_EXPORT QLedMatrix: public QWidget

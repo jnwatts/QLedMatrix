@@ -7,7 +7,11 @@ CONFIG                 += debug_and_release
 
 CONFIG                 += qt
 CONFIG                 += warn_on
-CONFIG                 += designer
+greaterThan(QT_MAJOR_VERSION, 4) {
+    QT                 += designer
+} else {
+    CONFIG             += designer
+}
 CONFIG                 += plugin
 
 DEFINES                += QT_NO_CAST_FROM_ASCII \
